@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background: linear-gradient(90deg, rgb(12, 124, 109), rgb(123, 27, 174));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .image2 img{
+    justify-content: last baseline;
+  
+
+}
+
+.box {
+    background-color: rgb(233, 230, 230);
+    width: 90%;
+    height: 90vh;
+}
+
+.navbar .logo {
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgb(28, 131, 159);
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: relative;
+}
+
+.navbar .logo::before {
+    content: "Apna Kitchen";
+    color: rgb(130, 10, 96);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    height: 15vh;
+}
+
+.navbar,
+.navlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navlist li {
+    list-style: none;
+    padding: 20px;
+    gap: 0.3rem;
+}
+
+.navlist a {
+    color:black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navbar .navlist li a:hover {
+    color:white;
+    font-size: 1.08rem;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: fixed;
+}
+
+.image img {
+    width: 48vw;
+    margin-right: 99px;
+    margin-bottom: 10px;
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 3px solid rgb(23, 112, 137);
+    padding: 20px 50px;
+    height: 50vh;
+}
+
+.content h1 {
+    color: rgb(130, 10, 96);
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.content h3 {
+    color: rgb(23, 112, 137);
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
+
+.content button {
+    background-color: rgb(16, 65, 71);
+    padding: 15px 30px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, 'Geneva', 'Verdana', ' sans-serif';
+    border: none;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: rgb(110, 32, 66);
+}
+
+.menu span {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(130, 10, 96);
+    display: block;
+    margin: 5px;
+    border-radius: 6px;
+
+
+}
+
+
+@media screen{
+    .navlist{
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        top: -70%;
+        width: 170px;
+        height: 52% ;
+        background-color:rgb(16, 65, 71);
+        justify-content: center;
+        transition: .5s ease-in-out;
+    
+    }
+    .box{
+        position: relative;
+        overflow: hidden;
+    }
+    .menu{
+        display: block;
+        z-index: 5;
+    }
+    .navlist-active{
+        top: 0;
+    }
+}
